@@ -31,4 +31,5 @@ contract MyToken {
 }
 ```
 # Executing the Program
+To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
