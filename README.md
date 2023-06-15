@@ -31,5 +31,5 @@ contract MyToken {
 }
 ```
 # Executing the Program
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+To run this program, you will have to use Remix, an online IDE for developing, deploying, debugging, and testing Ethereum and EVM-compatible smart contracts. Head over to the Remix website at https://remix.ethereum.org/.
 
