@@ -29,5 +29,5 @@ contract MyToken {
         }
     }
 }
-```Java
+```
 
