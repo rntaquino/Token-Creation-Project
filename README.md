@@ -43,7 +43,7 @@ In the solidity compiler, make sure that the checkbox for auto compile is checke
 
 Next, just hover your pointer over the icon below and click "Deploy and run transactions".
 
-In here, you are free to experiment with the number of tokens minted and burned. For starters, click the yellow button named "Deploy" which should officially create the token that is ready to be minted and burned.
+Here, you are free to experiment with the number of tokens minted and burned. For starters, click the yellow button named "Deploy" which should officially create the token that is ready to be minted and burned.
 
 Under, the deployed contracts tab, click the following buttons to view the token name and abbreviation, and of course, the total supply that you currently have. 
 
@@ -54,7 +54,7 @@ and "_value". In the address text field, simply paste the copied account details
 
 Once you are done. simply click again the "tokenSupply"  button to view the updated amount of tokens you have.
 
-Do note that, no transaction or error will happen if the token that you burned is greater than the token you minted.
+Do note that no transaction or error will happen if the token that you burned is greater than the token you minted.
 
 
 
