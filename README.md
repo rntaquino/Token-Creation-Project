@@ -1,6 +1,6 @@
 # Token-Creation-Project
 The following repository contains instructions on how to run the code in Remix Online IDE and the source code for the output.
-# Getting Started
+## Getting Started
 Copy the file below:
 
 ```Java
@@ -30,7 +30,7 @@ contract MyToken {
     }
 }
 ```
-# Executing the Program
+## Executing the Program
 
 To run this program, you will have to use Remix, an online IDE for developing, deploying, debugging, and testing Ethereum and EVM-compatible smart contracts. Head over to the Remix website at https://remix.ethereum.org/.
 
