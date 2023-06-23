@@ -4,31 +4,75 @@ The purpose of this code is to create contracts and the following repository con
 Copy the file below:
 
 ```Java
+// SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
-contract MyToken {
 
+/**
+ * @title MyToken
+ * @author Ramlogics Technosoft
+ * @notice Basic ERC20 smart contract implementation
+ */
+contract MyToken {
     // public variables here
-    string public tokenName = "Metal Gear Solid";
-    string public tokenAbbrv = "MGS";
+    string public tokenName = "Sample";
+    string public tokenAbbrv = "SMPLE";
     uint public totalSupply = 0;
 
-    // mapping variable here
+    /// mapping from user wallet address to token balance
     mapping (address => uint) public balances;
 
-    // mint function
-    function mint (address _address, uint _value) public {
+    /**
+     * @notice This function mint the _value tokens to the _address account
+     * @param _address user wallet address
+     * @param _value Amount of tokens to mint
+     */
+    function mint(address _address, uint _value) public {
+        /// Checking _value to be greater than zero or return the mentioned error message
+        require(_value > 0, "Value must be greater than zero");
+
         totalSupply += _value;
         balances[_address] += _value;
+
+        /* Assert that the balance of address has increased 
+            by _value or returns the error if condition failed
+        */
+        assert(balances[_address] >= _value);
     }
 
-    // burn function
-    function burn (address _address, uint _value) public {
-        if (balances[_address] >= _value) {
-            totalSupply -= _value;
-            balances[_address] -= _value;
+    /**
+     * @notice This function burn the _value tokens from the _address account
+     * @param _address user wallet address
+     * @param _value Amount of tokens to burn
+     */
+    function burn(address _address, uint _value) public {
+        if (_value == 0) {
+            revert("Value must be greater than zero"); // Revert if _value is 42
         }
+        require(balances[_address] >= _value, "Insufficient balance"); // Require sufficient balance to burn
+
+        totalSupply -= _value;
+        balances[_address] -= _value;
+
+        assert(balances[_address] <= balances[_address] + _value); // Assert that the balance of address has decreased by _value or is zero
+    }
+
+    // name function
+    function name() public view returns (string memory) {
+        return tokenName;
+    }
+
+    // symbol function
+    function symbol() public view returns (string memory) {
+        return tokenAbbrv;
+    }
+
+    // decimals function
+    function decimals() public pure returns (uint8) {
+        return 18; // Assuming 18 decimals for this example
     }
 }
+
+
 ```
 ## Executing the Program
 
